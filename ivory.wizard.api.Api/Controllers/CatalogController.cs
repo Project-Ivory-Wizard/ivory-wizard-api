@@ -35,9 +35,13 @@ namespace ivory.wizard.api.Api.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            var item = new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m);
-            item.Id = id;
-            return Ok(item);
+
+            var item = _db.Items.Find(id);
+            if (item = null)
+            {
+                return NotFound();
+            }
+            return Ok();
         }
 
         [HttpPost]
@@ -47,7 +51,8 @@ namespace ivory.wizard.api.Api.Controllers
         }
 
         [HttpPost("{id:int}/ratings")]
-        public IActionResult PostRating(int id, [FromBody] Rating rating){
+        public IActionResult PostRating(int id, [FromBody] Rating rating)
+        {
             var item = new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m);
             item.Id = id;
             item.AddRating(rating);
@@ -56,12 +61,14 @@ namespace ivory.wizard.api.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult Put(int id, Item item){
+        public IActionResult Put(int id, Item item)
+        {
             return NoContent();
         }
 
         [HttpDelete("{id:int}")]
-        public IActionResult delete(int id){
+        public IActionResult delete(int id)
+        {
             return NoContent();
         }
 
