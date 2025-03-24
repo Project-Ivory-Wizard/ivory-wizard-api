@@ -1,0 +1,6 @@
+@ivory_wizard_api.Api_HostAddress = http://localhost:5168
+
+GET {{ivory_wizard_api.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
