@@ -7,5 +7,10 @@ namespace Jet.Piranha.Api.Controllers
     [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
+        [HttpGet]
+        public IActionResult GetItems()
+        {
+            return Ok("hello world.");
+        }
     }
 }
