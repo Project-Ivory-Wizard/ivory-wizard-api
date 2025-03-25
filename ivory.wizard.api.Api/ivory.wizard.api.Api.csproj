@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ivory.wizard.api.Domain\ivory.wizard.api.Domain.csproj" />
-    <ProjectReference Include="..\ivory-wizard-api.Data\ivory-wizard-api.Data.csproj" />
+    <ProjectReference Include="..\ivory.wizard.api.Data\ivory.wizard.api.Data.csproj" />
   </ItemGroup>
 
 </Project>

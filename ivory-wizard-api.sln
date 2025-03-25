@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ivory.wizard.api.Domain", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ivory.wizard.api.Api", "ivory.wizard.api.Api\ivory.wizard.api.Api.csproj", "{E19C82E1-8526-44DC-9CD0-1EC25B7F5B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ivory-wizard-api.Data", "ivory-wizard-api.Data\ivory-wizard-api.Data.csproj", "{8DF2992C-AEAE-417B-B98F-00CE32E639D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ivory.wizard.api.Data", "ivory.wizard.api.Data\ivory.wizard.api.Data.csproj", "{3BE6B5CC-E5BC-410F-8145-66A9931FEC0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,9 @@ Global
 		{8DF2992C-AEAE-417B-B98F-00CE32E639D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DF2992C-AEAE-417B-B98F-00CE32E639D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DF2992C-AEAE-417B-B98F-00CE32E639D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE6B5CC-E5BC-410F-8145-66A9931FEC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE6B5CC-E5BC-410F-8145-66A9931FEC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE6B5CC-E5BC-410F-8145-66A9931FEC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE6B5CC-E5BC-410F-8145-66A9931FEC0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
