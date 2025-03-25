@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ivory.wizard.api.Domain.Catalog;
 using ivory.wizard.api.Data;
 
@@ -67,15 +68,22 @@ namespace ivory.wizard.api.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult Put(int id, Item item)
+        public IActionResult PutItem(int id, [FromBody] Item item)
         {
-            return NoContent();
-        }
+            if (id != item.Id)
+            {
+                return BadRequest();
+            }
+            if (_db.Items.Find(id) == null)
+            {
+                return NotFound();
+            }
 
-        [HttpDelete("{id:int}")]
-        public IActionResult delete(int id)
-        {
+            _db.Entry(item).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _db.SaveChanges();
             return NoContent();
+
+
         }
 
     }
