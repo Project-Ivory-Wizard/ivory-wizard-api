@@ -1,7 +1,9 @@
-using Microsoft.AspNetCore.Mvc;
+//using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ivory.wizard.api.Domain.Catalog;
 using ivory.wizard.api.Data;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace ivory.wizard.api.Api.Controllers
 {
@@ -86,6 +88,7 @@ namespace ivory.wizard.api.Api.Controllers
 
         }
         [HttpDelete("{id:int}")]
+        [Authorize("delete:catalog")]
         public IActionResult DeleteItem(int id)
         {
             var item = _db.Items.Find(id);
@@ -95,7 +98,7 @@ namespace ivory.wizard.api.Api.Controllers
             }
             _db.Items.Remove(item);
             _db.SaveChanges();
-            return ok();
+            return Ok();
         }
     }
 }
