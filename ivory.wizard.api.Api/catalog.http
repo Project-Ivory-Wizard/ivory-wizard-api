@@ -1,0 +1,11 @@
+###GET token from Auth0
+
+curl --request POST \
+  --url https://dev-ep6msb270eidmkyf.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"b7Ww08vBmY0mo1CAL6L7BdWdU0VD3vxB","client_secret":"gxQip_YaLDdNS3I9hWukBstcFB2OKBluQ7aIeUDNl8YczPOgXEOLc9VP7l9EZHPa","audience":"https://ivory-wizard/","grant_type":"client_credentials"}'
+
+### DELETE request to delete a catalog item
+curl --request DELETE \
+--url http://localhost:5263/catalog/3 \
+--header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6ImF0K2p3dCIsImtpZCI6IkhZbmNQaV9mSU5kcVpsWm50b3FVWCJ9.eyJpc3MiOiJodHRwczovL2Rldi1lcDZtc2IyNzBlaWRta3lmLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJiN1d3MDh2Qm1ZMG1vMUNBTDZMN0JkV2RVMFZEM3Z4QkBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9pdm9yeS13aXphcmQvIiwiaWF0IjoxNzQ0ODU4MzQ1LCJleHAiOjE3NDQ5NDQ3NDUsInNjb3BlIjoiZGVsZXRlOmNhdGFsb2ciLCJqdGkiOiJ3b0Fhb3lOc1htUjFaQTlBWFQzRndMIiwiY2xpZW50X2lkIjoiYjdXdzA4dkJtWTBtbzFDQUw2TDdCZFdkVTBWRDN2eEIifQ.bPo_Wdv5zGi3vVhfE-sHV_9Q8x8nYxC79F0MqC0GkVeiS5UN35VNbwoBUoQ0VyVvxBQncqoZXgv-s6A5W8AneHbKcvghOZOb-28eS53SqoTq5KHv7x3haNpe1-1gDdZKJuC81JCezOvYNMf1kdQhSk48mW8eJF1sOT8jdt64wu1HI2YOXfHTR66R-DqqG8GuZuMsi_KWJUnGr3L9fLY60xaFKB4gPQYFntz_34OFyZEung6svBUPA9SGWdlV3paOzE9wIbEfxXqS_9wk3Z_01y-7CTmmPpMd-JyaJEKdUSEuoP1O9AQh5DB_GwfJbihSasX6_6NROtAe3TCYaGu7xQ
